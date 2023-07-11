@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">एप्लिकेशन का नाम</string>
+    <string name="cancel_label">रद्द करें</string>
+    <string name="store_label">रक्षित करें</string>
+    <string name="license_title">लाइसेंस शीर्षक</string>
+    <string name="libraries_title">शीर्षक</string>
+    <string name="developer_info_title">डेवलपर</string>
+    <string name="design_api_title">आकृति दें</string>
+    <string name="application_info_title">एप्लीकेशन की जानकारी</string>
+    <string name="application_info_text">
+        <![CDATA[
+            <p>
+            <b>मौसम संबंधी जानकारी हेतु</b>
+            <br/>
+            एप्लीकेशन संस्करण: %1$s
+            <br/>
+
+            </p>
+        ]]>
+    </string>
+    <string name="current_label">वर्तमान</string>
+    <string name="humidity_label">नमी</string>
+    <string name="wind_label">हवा</string>
+    <string name="next_4_days_hourly">6 दिन बाद/प्रति घंटा</string>
+    <string name="next_15_days_label">۱अगले 15 दिन</string>
+    <string name="search_for_a_city_label">शहर खोजो</string>
+    <string name="zero_label">۰%d</string>
+    <string name="wind_unit_label">%.0f किमी/घं</string>
+    <string name="openweathermap_api_key_label">OpenWeatherMap API Key</string>
+    <string name="api_key_description"> API Key</string>
+    <string name="get_api_key_label">एपीआई कुंजी प्राप्त करें</string>
+    <string name="api_key_label">API Key</string>
+    <string name="search_label">खोज</string>
+    <string name="no_internet_message">कृपया इंटरनेट एक्सेस की जाँच करें</string>
+    <string name="no_city_found_message">इस नाम का शहर नहीं मिला</string>
+    <string name="invalid_api_key_message">एपीआई कुंजी अधिक जटिल है। अगले अपडेट का इंतजार करें</string>
+    <string name="network_exception_message">इंटरनेट कनेक्शन त्रुटि</string>
+    <string name="retry_label">पुनः प्रयास करें</string>
+    <string name="ok_label">ठीक</string>
+    <string name="night_mode_label">रात का मोड</string>
+</resources>

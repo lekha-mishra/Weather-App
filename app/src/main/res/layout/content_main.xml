@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="80dp"
+    android:visibility="gone"
+    android:background="@drawable/homedashboard"
+    tools:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/current_label"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/todayMaterialCard"
+            android:clickable="true"
+            android:focusable="true"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_view_height"
+            android:layout_marginStart="@dimen/spacing_mlarge"
+            android:layout_marginEnd="@dimen/spacing_mlarge"
+            app:cardBackgroundColor="@color/material_blue"
+            app:cardCornerRadius="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/spacing_medium">
+
+                <TextSwitcher
+                    android:id="@+id/temp_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="ltr"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/description_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/spacing_middle">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewInColoredCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/humidity_label"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="@dimen/spacing_medium"
+                                android:layout_height="0dp" />
+
+                            <TextSwitcher
+                                android:id="@+id/humidity_text_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/spacing_middle">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewInColoredCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/wind_label"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="@dimen/spacing_medium"
+                                android:layout_height="0dp" />
+
+                            <TextSwitcher
+                                android:id="@+id/wind_text_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animation_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="@dimen/spacing_mlarge"
+                android:text="@string/next_4_days_hourly"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/material_blue"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="2"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="17dp"
+                    android:layout_marginStart="@dimen/spacing_mlarge"
+                    android:text="@string/hourly_forecast"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/weeklyForecast"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="17dp"
+                    android:gravity="right"
+                    android:layout_marginEnd="@dimen/spacing_mlarge"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/weekly_forecast"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/material_blue"
+                android:layout_height="1dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginStart="@dimen/spacing_mlarge"
+                android:orientation="horizontal" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/todayMaterialCards"
+                android:clickable="true"
+                android:focusable="true"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_marginStart="@dimen/spacing_mlarge"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="@dimen/spacing_mlarge"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/material_blue"
+                app:cardCornerRadius="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/spacing_medium">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_large"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                       <ImageView
+                           android:layout_width="40dp"
+                           android:layout_height="40dp"
+                           android:src="@drawable/thermometer"
+                           android:tint="@color/white"
+                           />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewInColoredCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="25dp"
+                            android:text="@string/tempstring"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtrealFeel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="15dp"
+                        android:textSize="17dp"
+                        android:layout_marginStart="@dimen/spacing_mlarge"
+                        android:text="@string/lowhealth"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/white" />
+
+                    <View
+                        android:id="@+id/idrealFeel"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/slider_bg"
+                        />
+                    <TextView
+                        android:id="@+id/txtTemptext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="See more"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_marginLeft="20dp"
+                        />
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:weightSum="2"
+           android:orientation="horizontal"
+           >
+           <com.google.android.material.card.MaterialCardView
+               android:id="@+id/todayMaterialCardsw"
+               android:clickable="true"
+               android:layout_weight="1"
+               android:focusable="true"
+               style="@style/Widget.MaterialComponents.CardView"
+               android:layout_width="match_parent"
+               android:layout_height="175dp"
+               android:layout_marginStart="@dimen/spacing_mlarge"
+               android:layout_marginTop="20dp"
+               android:layout_marginEnd="8dp"
+               android:layout_marginBottom="20dp"
+               app:cardBackgroundColor="@color/material_blue"
+               app:cardCornerRadius="30dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:paddingTop="@dimen/spacing_medium">
+
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="@dimen/spacing_large"
+                       android:layout_marginTop="10dp"
+                       android:orientation="horizontal">
+                       <ImageView
+                           android:layout_width="40dp"
+                           android:layout_height="40dp"
+                           android:src="@drawable/barometer"
+                           android:tint="@color/white"
+                           />
+                       <androidx.appcompat.widget.AppCompatTextView
+                           style="@style/TextViewInColoredCard"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:gravity="center"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginLeft="25dp"
+                           android:text="@string/pressure"
+                           android:textStyle="bold" />
+
+
+                   </LinearLayout>
+                   <TextView
+                       android:id="@+id/txtPressure"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="4"
+                       android:textSize="18dp"
+                       android:layout_marginTop="10dp"
+                       android:textColor="@color/colorPrimaryDark"
+                       android:layout_marginLeft="20dp"
+                       />
+                   <androidx.appcompat.widget.AppCompatTextView
+                       android:id="@+id/txtPressureText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginTop="5dp"
+                       android:textSize="17dp"
+                       android:layout_marginStart="@dimen/spacing_mlarge"
+                       android:text="Moderate"
+                       android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                       android:textColor="@color/white" />
+
+                   <View
+                       android:id="@+id/idtxtPressure"
+                       android:layout_width="match_parent"
+                       android:layout_height="5dp"
+                       android:layout_margin="20dp"
+                       android:background="@drawable/slider_bg"
+                       />
+
+
+               </LinearLayout>
+
+
+           </com.google.android.material.card.MaterialCardView>
+
+           <com.google.android.material.card.MaterialCardView
+               android:id="@+id/todayMaterialCardsd"
+               android:clickable="true"
+               android:focusable="true"
+               android:layout_weight="1"
+               style="@style/Widget.MaterialComponents.CardView"
+               android:layout_width="match_parent"
+               android:layout_height="175dp"
+               android:layout_marginStart="8dp"
+               android:layout_marginTop="20dp"
+               android:layout_marginEnd="@dimen/spacing_mlarge"
+               android:layout_marginBottom="20dp"
+               app:cardBackgroundColor="@color/material_blue"
+               app:cardCornerRadius="30dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:paddingTop="@dimen/spacing_medium">
+
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="@dimen/spacing_large"
+                       android:layout_marginTop="10dp"
+                       android:orientation="horizontal">
+                       <ImageView
+                           android:layout_width="40dp"
+                           android:layout_height="40dp"
+                           android:src="@drawable/beach"
+                           android:tint="@color/white"
+                           />
+                       <androidx.appcompat.widget.AppCompatTextView
+                           style="@style/TextViewInColoredCard"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:gravity="center"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginLeft="25dp"
+                           android:text="@string/sunrise"
+                           android:textStyle="bold" />
+
+
+                   </LinearLayout>
+
+                   <androidx.appcompat.widget.AppCompatTextView
+                       android:id="@+id/txtSunrise"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginTop="15dp"
+                       android:textSize="25dp"
+                       android:layout_marginStart="@dimen/spacing_mlarge"
+                       android:text="5:28AM"
+                       android:layout_marginBottom="25dp"
+                       android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                       android:textColor="@color/white" />
+
+
+                   <TextView
+                       android:id="@+id/txtSunset"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Sunset:  7:25PM"
+                       android:textColor="@color/colorPrimaryDark"
+                       android:layout_marginLeft="20dp"
+                       />
+
+               </LinearLayout>
+
+
+           </com.google.android.material.card.MaterialCardView>
+
+
+
+       </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                >
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/todayMaterialCardsew"
+                    android:clickable="true"
+                    android:layout_weight="1"
+                    android:focusable="true"
+                    style="@style/Widget.MaterialComponents.CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:layout_marginStart="@dimen/spacing_mlarge"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="@color/material_blue"
+                    app:cardCornerRadius="30dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/spacing_medium">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_large"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/visibility"
+                                android:tint="@color/white"
+                                />
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewInColoredCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="25dp"
+                                android:text="@string/visibility"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/txtVisibility"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="5 Meter"
+                            android:textSize="25dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_marginLeft="20dp"
+                            />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtVisibilityValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="5dp"
+                            android:textSize="17dp"
+                            android:layout_marginStart="@dimen/spacing_mlarge"
+                            android:text="Moderate"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            android:id="@+id/bgVisibility"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/slider_bg"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/todayMaterialCardseed"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="@dimen/spacing_mlarge"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="@color/material_blue"
+                    app:cardCornerRadius="30dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/spacing_medium">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_large"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/wind"
+                                android:tint="@color/white"
+                                />
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewInColoredCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="25dp"
+                                android:text="@string/wind"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtWind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="15dp"
+                            android:textSize="25dp"
+                            android:layout_marginStart="@dimen/spacing_mlarge"
+                            android:text="5 M/s"
+                            android:layout_marginBottom="25dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                            android:textColor="@color/white" />
+
+
+                        <TextView
+                            android:id="@+id/txtwindDegree"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Wind Direction:  300°"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_marginLeft="20dp"
+                            />
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

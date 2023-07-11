@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="5dp"
+    app:cardCornerRadius="50dp"
+    android:layout_marginRight="5dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layoutbg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="50dp"
+        app:cardBackgroundColor="#6452f0"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:id="@+id/date_layout"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            android:orientation="vertical"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/timingHourly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingBottom="2dp"
+                android:text="12PM"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="normal"
+                app:drawableTint="@color/white"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/rainStatus"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                app:srcCompat="@drawable/ic_rainy_weather"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/rainPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="21%"
+                android:textColor="#DFE1CDCD"
+                android:textSize="17dp"
+                android:textStyle="normal"
+
+
+                app:layout_constraintEnd_toEndOf="@+id/ratingValue"
+                app:layout_constraintHorizontal_bias="0.447"
+                app:layout_constraintStart_toStartOf="@+id/ratingValue"
+                app:layout_constraintTop_toBottomOf="@+id/ratingValue" />
+
+            <TextView
+                android:id="@+id/tempHourly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:text="8°"
+                android:layout_marginBottom="10dp"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                app:layout_constraintEnd_toEndOf="@+id/rainPercent"
+                app:layout_constraintStart_toStartOf="@+id/rainPercent"
+                app:layout_constraintTop_toBottomOf="@+id/rainPercent" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.cardview.widget.CardView>

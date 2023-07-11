@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="cancel_label">रद्द करें</string>
+    <string name="store_label">रक्षित करें</string>
+    <string name="license_title">लाइसेंस शीर्षक</string>
+    <string name="libraries_title">शीर्षक</string>
+    <string name="developer_info_title">डेवलपर</string>
+    <string name="design_api_title">आकृति दें</string>
+    <string name="application_info_title">एप्लीकेशन की जानकारी</string>
+    <string name="current_label">वर्तमान</string>
+    <string name="humidity_label">नमी</string>
+    <string name="wind_label">हवा</string>
+    <string name="next_4_days_hourly">6 दिन बाद/प्रति घंटा</string>
+    <string name="next_15_days_label">अगले 15 दिन</string>
+    <string name="search_for_a_city_label">शहर खोजो</string>
+    <string name="wind_unit_label">%.0f किमी/घं</string>
+    <string name="get_api_key_label">एपीआई कुंजी प्राप्त करें</string>
+    <string name="api_key_label">API Key</string>
+    <string name="search_label">खोज</string>
+    <string name="no_internet_message">कृपया इंटरनेट एक्सेस की जाँच करें</string>
+    <string name="no_city_found_message">इस नाम का शहर नहीं मिला</string>
+    <string name="invalid_api_key_message">एपीआई कुंजी अधिक जटिल है। अगले अपडेट का इंतजार करें</string>
+    <string name="network_exception_message">इंटरनेट कनेक्शन त्रुटि</string>
+    <string name="retry_label">पुनः प्रयास करें</string>
+    <string name="ok_label">ठीक</string>
+    <string name="night_mode_label">रात का मोड</string>
+    <string name="application_info_text">
+        <![CDATA[
+            <p>
+            <b>मौसम संबंधी जानकारी हेतु</b>
+            <br/>
+            एप्लीकेशन संस्करण: %1$s
+            <br/>
+
+            </p>
+        ]]>
+    </string>
+    <string name="hourly_forecast" translatable="false">प्रति घंटा पूर्वानुमान</string>
+    <string name="weekly_forecast" translatable="false">साप्ताहिक पूर्वानुमान</string>
+    <string name="tempstring" translatable="false">तापमान</string>
+    <string name="lowhealth" translatable="false">असली लग रहा है</string>
+    <string name="very_cold" translatable="false">बहुत सर्दी</string>
+    <string name="cold" translatable="false">ठंडा</string>
+    <string name="moderate_cold" translatable="false">मध्यम ठंडा</string>
+    <string name="average_cold" translatable="false">औसत सर्दी</string>
+    <string name="warm" translatable="false">उष्ण</string>
+    <string name="hot" translatable="false">गर्म</string>
+    <string name="very_hot" translatable="false">बहुत गर्म</string>
+    <string name="pressure" translatable="false">दबाव</string>
+    <string name="very_low_pressure" translatable="false">बहुत कम दबाव</string>
+    <string name="low_pressure" translatable="false">कम दबाव</string>
+    <string name="moderate_pressure" translatable="false">मध्यम दबाव</string>
+    <string name="average_pressure" translatable="false">औसत दबाव</string>
+    <string name="high_pressure" translatable="false">उच्च दबाव</string>
+    <string name="very_high_pressure" translatable="false">अति उच्च दाब</string>
+    <string name="sunrise" translatable="false">सूर्योदय</string>
+    <string name="sunset" translatable="false">सूर्यास्त</string>
+    <string name="wind" translatable="false">हवा</string>
+    <string name="wind_direction" translatable="false">हवा की दिशा</string>
+    <string name="wind_speed" translatable="false">किमी/घंटा</string>
+    <string name="visibility" translatable="false">दृश्यता</string>
+    <string name="visibility_label" translatable="false">दृश्यता</string>
+    <string name="very_bad_visibility" translatable="false">बहुत खराब</string>
+    <string name="bad_visibility" translatable="false">खराब दृश्यता</string>
+    <string name="moderate_visibility" translatable="false">मध्यम दृश्यता</string>
+    <string name="good_visibility" translatable="false">अच्छी दृश्यता</string>
+    <string name="exellent_visibility" translatable="false">उत्कृष्ट दृश्यता</string>
+    <string name="km" translatable="false">किमी</string>
+    <string name="realfeel" translatable="false">असली लग रहा है</string>
+    <string name="realfeelshade" translatable="false">रियल फील शेड</string>
+    <string name="humidity" translatable="false">नमी</string>
+    <string name="indoor_humidity" translatable="false">भीतरी आर्द्रता</string>
+    <string name="air_quality" translatable="false">हवा की गुणवत्ता</string>
+    <string name="uv_index" translatable="false">यूवी सूचकांक</string>
+    <string name="wind_gust" translatable="false">हवा के झोके</string>
+    <string name="cloud_cover" translatable="false">ढका हुआ बादल</string>
+    <string name="dew_point" translatable="false">ओसांक</string>
+    <string name="atmospheric_pressure" translatable="false">वायु-दाब</string>
+    <string name="share_app" translatable="false">हमारे ऐप को साझा करें</string>
+    <string name="hindi_label" translatable="false">हिंदी</string>
+    <string name="Thunderstorm" translatable="false">आंधी तूफान</string>
+    <string name="Drizzle" translatable="false">बूंदा बांदी</string>
+    <string name="Rain" translatable="false">बारिश</string>
+    <string name="Snow" translatable="false">बर्फ</string>
+    <string name="Atmosphere" translatable="false">वातावरण</string>
+    <string name="Clear" translatable="false">स्पष्ट</string>
+    <string name="FewClouds" translatable="false">थोड़े से बादल</string>
+    <string name="BrokenClouds" translatable="false">टूटे हुए बादल</string>
+    <string name="Cloud" translatable="false">बादल</string>
+    <string name="search_label_toolbar" translatable="false">कृपया शहर का नाम दर्ज करें</string>
+
+</resources>
