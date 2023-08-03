@@ -1,4 +1,6 @@
 # Weather App
+[![Java](https://img.shields.io/badge/java-%2320232a.svg?style=for-the-badge&logo=java&logoColor=%23ED8B00)](https://www.oracle.com/java/)
+
 
 This is a simple weather app for Android that allows users to check the current weather conditions and forecast for a location.
 
